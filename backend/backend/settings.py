@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'taskmanager',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'Ad@123',
-        'HOST': 'localhost',
+        'PASSWORD': 'XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF',
+        'HOST': 'mysql.railway.internal',
         'PORT': '3306',
     }
 
