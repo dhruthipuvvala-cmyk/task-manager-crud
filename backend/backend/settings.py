@@ -145,5 +145,6 @@ STORAGES = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://task-manager-crud-82scme3yo-akshaya7.vercel.app",
+    "https://task-manager-crud-ib3b4o55j-akshaya7.vercel.app",
 ]
 CORS_ALLOW_ALL_ORIGINS = True  # Allows any frontend to connect securely during testing
