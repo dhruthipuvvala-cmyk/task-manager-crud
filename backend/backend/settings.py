@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'root',
         'PASSWORD': 'XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF',
-        'HOST': 'mysql://root:XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF@hayabusa.proxy.rlwy.net:23202/railway',
-        'PORT': '3306',
+        'HOST': 'hayabusa.proxy.rlwy.net',
+        'PORT': '23202',
     }
 
     }
