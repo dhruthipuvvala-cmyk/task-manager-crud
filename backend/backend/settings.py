@@ -78,17 +78,19 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+import os
+
+# Base database configuration pointing to your Railway MySQL instance
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF',
-        'HOST': 'hayabusa.proxy.rlwy.net',
-        'PORT': '23202',
+        'PASSWORD': os.environ.get('MYSQLPASSWORD', 'XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF'),
+        'HOST': os.environ.get('MYSQLHOST', 'hayabusa.proxy.rlwy.net'),
+        'PORT': os.environ.get('MYSQLPORT', '23202'),
     }
-
-    }
+}
 
 
 
