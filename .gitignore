@@ -1,0 +1,22 @@
+# Virtual Environment
+backend/venv/
+backend/.env
+frontend/.env
+
+# Python Caches
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Django Static / Media Local files
+backend/staticfiles/
+backend/media/
+
+# Node modules (Frontend)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
