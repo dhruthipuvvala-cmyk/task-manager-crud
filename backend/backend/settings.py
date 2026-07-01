@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'root',
         'PASSWORD': 'XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF',
-        'HOST': 'mysql.railway.internal',
+        'HOST': 'mysql://root:XFaDSLnxKOCiLXRoezCdgLwyKBLdgXlF@hayabusa.proxy.rlwy.net:23202/railway',
         'PORT': '3306',
     }
 
@@ -131,6 +131,7 @@ import os
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    "http://localhost:3000",
 ]
