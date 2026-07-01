@@ -27,6 +27,21 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# CSRF and Security Settings for deployed environments
+CSRF_TRUSTED_ORIGINS = [
+    "https://task-manager-crud-production.up.railway.app",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
+
+# Security settings for HTTPS
+SECURE_SSL_REDIRECT = False  # Set to True in production if using HTTPS
+SESSION_COOKIE_SECURE = False  # Set to True in production
+CSRF_COOKIE_SECURE = False  # Set to True in production
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SAMESITE = 'Lax'
+
 
 # Application definition
 
@@ -148,3 +163,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://task-manager-crud-ib3b4o55j-akshaya7.vercel.app",
 ]
 CORS_ALLOW_ALL_ORIGINS = True  # Allows any frontend to connect securely during testing
+
+# REST Framework configuration
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+}
